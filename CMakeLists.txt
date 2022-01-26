@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.12) 
+cmake_minimum_required(VERSION 2.8.12)
 project(sick_safetyscanners_base CXX)
 
 ## Use C++11
@@ -22,7 +22,7 @@ if(USE_ROS_LOGGING)
 endif()
 
 ## Declare a cpp library
-add_library(sick_safetyscanners_base SHARED
+add_library(sick_safetyscanners_base STATIC
   src/SickSafetyscanners.cpp
   src/cola2/ApplicationNameVariableCommand.cpp
   src/cola2/ChangeCommSettingsCommand.cpp
@@ -164,7 +164,7 @@ install(
 install(
   DIRECTORY include/${PROJECT_NAME}/
   DESTINATION include/${PROJECT_NAME}
-  FILES_MATCHING 
+  FILES_MATCHING
   PATTERN "*.h"
   PATTERN "*.hpp"
 )
