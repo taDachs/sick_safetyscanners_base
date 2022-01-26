@@ -131,11 +131,9 @@ endif()
 target_include_directories(sick_safetyscanners_base PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
-  ${Boost_INCLUDE_DIR}
   )
 
-target_link_libraries(sick_safetyscanners_base PUBLIC ${Boost_LIBRARIES}
-)
+target_link_libraries(sick_safetyscanners_base PUBLIC ${Boost_LIBRARIES})
 
 add_library(sick_safetyscanners_base::sick_safetyscanners_base ALIAS sick_safetyscanners_base)
 

@@ -40,8 +40,8 @@
 
 #include "sick_safetyscanners_base/data_processing/ParseDatagramHeader.h"
 
+#include <map>
 #include <algorithm>
-#include <mutex>
 
 namespace sick {
 namespace data_processing {
